@@ -1,0 +1,226 @@
+GNS3 VM to VMware Workstation Connection – Detailed Notes
+
+1. Prerequisites
+
+-   Windows 10/11
+-   VMware Workstation installed
+-   GNS3 latest version installed
+-   GNS3 VM appliance imported into VMware
+-   Minimum 8 GB RAM (16 GB recommended)
+-   Intel VT-x/AMD-V enabled in BIOS
+
+2. Verify Virtualization
+
+1.  Open Task Manager.
+2.  Go to Performance → CPU.
+3.  Check “Virtualization”.
+4.  It should display Enabled.
+
+Alternative: - Open Command Prompt: systeminfo - Verify Hyper-V and
+virtualization information.
+
+3. Install VMware Workstation
+
+1.  Download VMware Workstation.
+2.  Install using default settings.
+3.  Reboot the system.
+
+4. Import GNS3 VM
+
+1.  Download GNS3 VM OVA.
+2.  Open VMware Workstation.
+3.  File → Open.
+4.  Select GNS3 VM OVA.
+5.  Import VM.
+6.  Allocate:
+    -   RAM: 8 GB minimum
+    -   CPU: 4 cores minimum
+
+5. Configure VM Network
+
+1.  Open VMware Workstation.
+2.  Select GNS3 VM.
+3.  Click Settings.
+4.  Network Adapter:
+    -   NAT (recommended) OR
+    -   Bridged (advanced labs)
+5.  Save settings.
+
+6. Power On GNS3 VM
+
+1.  Start the VM.
+2.  Wait until fully booted.
+3.  Note the displayed IP address.
+
+Example: 192.168.213.200
+
+7. Verify Connectivity from Windows
+
+Open Command Prompt:
+
+ping
+
+Example: ping 192.168.213.200
+
+Expected: Reply from 192.168.213.200
+
+8. Configure GNS3 Application
+
+1.  Open GNS3.
+
+2.  Edit → Preferences.
+
+3.  GNS3 VM.
+
+4.  Enable: [✓] Enable the GNS3 VM
+
+5.  Select: VMware Workstation
+
+6.  VM Name: GNS3 VM
+
+7.  Apply.
+
+9. Test Server Connection
+
+1.  Open GNS3.
+2.  Help → Setup Wizard.
+3.  Run tests.
+
+Expected: Local server connected. GNS3 VM connected.
+
+10. Fix Red Status Issue
+
+If VM status is red:
+
+A. Verify VM is running.
+
+B. Verify IP address.
+
+C. Restart services: Edit → Preferences → GNS3 VM Disable and Enable.
+
+D. Reboot VM.
+
+E. Reboot GNS3.
+
+11. Check GNS3 VM IP
+
+Inside VM:
+
+ip addr
+
+or
+
+hostname -I
+
+Example Output: 192.168.213.200
+
+12. SSH into GNS3 VM
+
+From Windows:
+
+ssh gns3@192.168.213.200
+
+Default password: gns3
+
+13. Install Python Packages
+
+Update packages:
+
+sudo apt update
+
+Create virtual environment:
+
+python3 -m venv venv
+
+Activate:
+
+source venv/bin/activate
+
+Upgrade pip:
+
+pip install –upgrade pip
+
+Install packages:
+
+pip install paramiko pip install netmiko pip install napalm pip install
+nornir
+
+14. Verify Installed Packages
+
+pip list
+
+or
+
+pip show paramiko
+
+15. Troubleshooting PEP 668 Error
+
+Do NOT use:
+
+pip install package_name
+
+Instead:
+
+python3 -m venv venv source venv/bin/activate pip install package_name
+
+16. Verify Router Connectivity
+
+Ping Router:
+
+ping 192.168.122.10
+
+SSH Test:
+
+ssh admin@192.168.122.10
+
+17. Paramiko Connectivity Test
+
+Example:
+
+import paramiko
+
+ssh = paramiko.SSHClient()
+ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+
+ssh.connect( hostname=“192.168.122.10”, username=“admin”,
+password=“cisco” )
+
+stdin, stdout, stderr = ssh.exec_command(“show ip int brief”)
+
+print(stdout.read().decode())
+
+ssh.close()
+
+18. Netmiko Connectivity Test
+
+from netmiko import ConnectHandler
+
+router = { “device_type”: “cisco_ios”, “host”: “192.168.122.10”,
+“username”: “admin”, “password”: “cisco” }
+
+connection = ConnectHandler(**router)
+
+print(connection.send_command(“show ip int brief”))
+
+connection.disconnect()
+
+19. Common Problems
+
+Problem: VM not detected Solution: - Verify VMware integration. - Verify
+VM name.
+
+Problem: Ping fails Solution: - Check NAT settings. - Verify firewall.
+
+Problem: SSH fails Solution: - Verify router SSH configuration. - Verify
+IP address.
+
+Problem: GNS3 VM Red Solution: - Restart VM. - Re-enable GNS3 VM option.
+
+20. Final Validation Checklist
+
+[ ] VMware installed [ ] GNS3 installed [ ] GNS3 VM imported [ ] VM
+powered on [ ] VM IP obtained [ ] Ping successful [ ] GNS3 VM enabled [
+] Server connected [ ] SSH working [ ] Paramiko working [ ] Netmiko
+working [ ] Router reachable
+
+End of Notes.
