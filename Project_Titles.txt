@@ -1,0 +1,379 @@
+Project Title
+Unified Network Operations & Automation Platform
+Project Overview
+
+Develop a Python-based Network Automation Platform that helps network engineers perform day-to-day operational tasks from a single application. The platform should automate inventory collection, configuration backup, health monitoring, API-based management, reporting, and alerting using modern network automation techniques.
+
+Module 1: Device Inventory Management
+Description
+
+Create a module that connects to network devices and collects basic inventory information.
+
+Responsibilities
+Collect hostname
+Collect model number
+Collect OS version
+Collect serial number
+Maintain device inventory
+Deliverable
+
+Inventory report containing all managed devices.
+
+Module 2: Configuration Backup Management
+Description
+
+Develop a module that automatically retrieves and stores device configurations.
+
+Responsibilities
+Collect running configuration
+Store backups locally
+Maintain backup history
+Compare current and previous backups
+Deliverable
+
+Configuration backup repository and backup status report.
+
+Module 3: Network Health Monitoring
+Description
+
+Build a monitoring system that continuously checks device health and availability.
+
+Responsibilities
+Monitor CPU utilization
+Monitor memory utilization
+Monitor interface status
+Check device reachability
+Detect threshold violations
+Deliverable
+
+Device health report showing current network status.
+
+Module 4: REST API Integration
+Description
+
+Implement network automation using REST APIs to retrieve and manage device information.
+
+Responsibilities
+Authenticate with API services
+Retrieve device information
+Parse JSON responses
+Display collected information
+Deliverable
+
+API-generated device information report.
+
+Module 5: RESTCONF Management
+Description
+
+Develop a RESTCONF-based module for managing Cisco IOS-XE devices.
+
+Responsibilities
+Retrieve hostname
+Retrieve interface information
+Retrieve IP configuration
+Access YANG-based data models
+Deliverable
+
+RESTCONF operational data report.
+
+Module 6: NETCONF Management
+Description
+
+Implement device management using NETCONF and YANG models.
+
+Responsibilities
+Retrieve configuration data
+Retrieve operational data
+Modify configurations
+Validate configuration changes
+Deliverable
+
+NETCONF configuration management report.
+
+Module 7: Multi-Vendor Device Support
+Description
+
+Extend the platform to support multiple network vendors.
+
+Responsibilities
+Manage Cisco devices
+Manage Juniper devices
+Standardize device access
+Collect common operational data
+Deliverable
+
+Multi-vendor inventory and status report.
+
+Module 8: Automated Reporting System
+Description
+
+Generate management and operational reports using collected network data.
+
+Responsibilities
+Generate inventory reports
+Generate health reports
+Generate backup reports
+Export reports in CSV/Excel format
+Deliverable
+
+Consolidated network operations report.
+
+Module 9: Alert & Notification System
+Description
+
+Notify administrators when network issues are detected.
+
+Responsibilities
+Monitor thresholds
+Detect failures
+Generate alerts
+Send email notifications
+Deliverable
+
+Alert notification log and email alerts.
+
+Module 10: Troubleshooting & Diagnostics
+Description
+
+Automate the collection of troubleshooting information during network incidents.
+
+Responsibilities
+Collect interface details
+Collect routing information
+Collect logs
+Collect device resource usage
+Generate diagnostic reports
+Deliverable
+
+Network troubleshooting report with identified issues.
+
+Expected Outcome
+
+At the end of the project, the platform should allow a network engineer to:
+
+View network inventory
+Backup configurations
+Monitor device health
+Access devices through REST APIs
+Manage devices using RESTCONF
+Manage devices using NETCONF
+Generate reports
+Receive alerts
+Collect troubleshooting information
+
+This project is designed to cover all major concepts discussed during the 11-day Network Automation training program and serves as the final assessment project.
+
+i wanted like this 10 projects
+
+Perfect. Since this is for students/professionals after completing the 11-day Network Automation course, below are 10 project titles in the same format (Project Overview + Modules + Expected Outcome) that you can directly assign.
+
+Project 1: Unified Network Operations & Automation Platform
+Project Overview
+
+Develop a centralized platform to automate inventory collection, configuration backup, health monitoring, RESTCONF operations, NETCONF operations, reporting, and alerting.
+
+Modules
+Device Inventory Management
+Configuration Backup
+Health Monitoring
+REST API Integration
+RESTCONF Management
+NETCONF Management
+Reporting System
+Alert & Notification System
+Expected Outcome
+
+A single platform that automates day-to-day network operations.
+
+Project 2: Automated Network Compliance & Audit System
+Project Overview
+
+Develop a system that validates whether network devices comply with organizational security and configuration standards.
+
+Modules
+Device Inventory Collection
+Configuration Retrieval
+Compliance Rule Engine
+Security Validation
+Audit Report Generation
+Alert Notification
+Expected Outcome
+
+Automated compliance report showing compliant and non-compliant devices.
+
+Project 3: Intelligent Network Health Monitoring System
+Project Overview
+
+Develop a monitoring solution that continuously checks device health and identifies network issues before they impact users.
+
+Modules
+Device Discovery
+CPU Monitoring
+Memory Monitoring
+Interface Monitoring
+Threshold Management
+Alerting System
+Reporting Dashboard
+Expected Outcome
+
+Centralized health monitoring and proactive alert generation.
+
+Project 4: Multi-Vendor Network Management Platform
+Project Overview
+
+Build a platform capable of managing Cisco and Juniper devices using a common automation framework.
+
+Modules
+Vendor Inventory Management
+Device Connectivity Module
+Configuration Collection
+Backup Management
+Monitoring Module
+Reporting Module
+Expected Outcome
+
+Single solution for managing multiple network vendors.
+
+Project 5: Automated Configuration Backup & Change Tracking System
+Project Overview
+
+Develop a solution that automatically backs up device configurations and tracks configuration changes over time.
+
+Modules
+Device Inventory
+Configuration Collection
+Backup Repository
+Configuration Comparison Engine
+Change Tracking
+Report Generation
+Expected Outcome
+
+Automated backup system with configuration change history.
+
+Project 6: Network Incident & Troubleshooting Assistant
+Project Overview
+
+Develop a tool that automatically collects troubleshooting information during network incidents and assists engineers in diagnosing problems.
+
+Modules
+Device Connectivity
+Interface Diagnostics
+Routing Analysis
+Log Collection
+Health Analysis
+Diagnostic Reporting
+Expected Outcome
+
+Automated troubleshooting report for faster issue resolution.
+
+Project 7: RESTCONF-Based Network Management Portal
+Project Overview
+
+Create a management portal that performs operational and configuration tasks using RESTCONF APIs.
+
+Modules
+RESTCONF Authentication
+Device Information Retrieval
+Interface Management
+Configuration Management
+Data Processing
+Reporting Module
+Expected Outcome
+
+RESTCONF-based network management application.
+
+Project 8: NETCONF Configuration Management Platform
+Project Overview
+
+Build a configuration management system using NETCONF and YANG models to automate network configuration tasks.
+
+Modules
+NETCONF Session Management
+Configuration Retrieval
+Configuration Deployment
+Validation Module
+Backup Module
+Reporting Module
+Expected Outcome
+
+Automated NETCONF-based configuration management solution.
+
+Project 9: Automated Device Provisioning & Onboarding System
+Project Overview
+
+Develop a platform that automatically provisions newly deployed network devices using predefined templates and standards.
+
+Modules
+Device Discovery
+Inventory Collection
+Baseline Configuration Deployment
+Configuration Verification
+Inventory Update
+Reporting Module
+Expected Outcome
+
+Automated onboarding of new network devices.
+
+Project 10: API-Driven Network Controller Dashboard
+Project Overview
+
+Develop a dashboard that integrates with network controllers through APIs to display network status, inventory, alarms, and operational data.
+
+Modules
+API Authentication
+Device Inventory Collection
+Alarm Management
+Network Health Dashboard
+Report Generation
+Alert Management
+Expected Outcome
+
+Interactive dashboard providing centralized network visibility.
+
+Coverage Across 11-Day Training
+
+These 10 projects collectively cover:
+
+✅ Python Fundamentals
+
+✅ Functions & Modules
+
+✅ File Handling
+
+✅ Exception Handling
+
+✅ OOP Concepts
+
+✅ Regular Expressions
+
+✅ JSON & YAML
+
+✅ Multithreading
+
+✅ Paramiko / Netmiko
+
+✅ REST APIs
+
+✅ Requests Library
+
+✅ RESTCONF
+
+✅ NETCONF
+
+✅ YANG Models
+
+✅ Nornir
+
+✅ NAPALM
+
+✅ Monitoring
+
+✅ Reporting
+
+✅ Email Alerts
+
+✅ Troubleshooting
+
+✅ Best Practices
+
+✅ Final Assessment Concepts
