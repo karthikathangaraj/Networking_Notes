@@ -1,0 +1,90 @@
+Python is a high-level, interpreted,
+ general-purpose programming language
+  that is easy to learn and widely 
+  used for automation, data analysis,
+   AI, cybersecurity, cloud computing, 
+   and network engineering.
+
+Created by: Guido van Rossum in 1991. 
+
+Why is Python Popular in Networking?
+
+Before Python, network engineers had to:
+
+Configure routers manually
+Log in to each device individually
+Copy and paste commands
+Check device status manually
+Create reports manually
+
+Data Type 
+A data type tells Python:
+
+What kind of value is stored
+How much memory to allocate
+What operations can be performed on the value
+
+Definition: 
+A data type is a classification of data that specifies the type
+ of value a variable can hold.
+ Category	 Data Types
+Numeric  	int, float, complex
+Text	    str
+Boolean	    bool
+Sequence	list, tuple, range
+Mapping  	dict
+Set	set, frozenset
+Binary	bytes, bytearray, memoryview
+Special	NoneType  
+
+operators in python
+1. Arithmetic Operators
+
++ - * / // %  ** 
+
+2. Comparison (Relational) Operators 
+
+
+ == != > < >= <=
+
+3. Logical Operators 
+ and or not 
+
+4. Assignment Operators 
+a=10 += -= *= /= //= 
+5. Bitwise Operators 
+& ^ ~ << >>
+7. Identity Operators 
+is is not 
+6. Membership Operators 
+in not in
+Conditional Statements in Python
+
+Conditional statements are used to make decisions in a program. They execute different blocks of code based on whether a condition is True or False.
+
+Types of Conditional Statements
+if
+if-else
+if-elif-else
+Nested if 
+
+Loops are used to execute a block of code repeatedly until a condition is met.
+
+Types of Loops
+for loop
+while loop
+Nested loops
+Loop control statements
+break
+continue
+pass 
+
+
+1. Functions
+
+A function is a reusable block of code that performs a specific task. Functions help make programs shorter, easier to understand, and easier to maintain.
+
+Syntax
+def function_name(parameters):
+    # Function body
+    return value
