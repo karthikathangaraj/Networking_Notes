@@ -1,0 +1,7 @@
+hello demo on the data
+hello
+Python
+Java
+AI
+1
+2,3,4,5,6

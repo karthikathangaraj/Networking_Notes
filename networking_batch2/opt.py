@@ -44,3 +44,11 @@ name="karthika"
 name1="karthika"
 print("A" in name)
 print(name is not name1)
+# from calculs import *
+import calculs as c1
+c1.add(1,2)
+c1.sub(2,3)
+
+from math import sqrt, factorial
+print(sqrt(64))
+print(factorial(4))

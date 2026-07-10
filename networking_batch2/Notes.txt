@@ -88,3 +88,65 @@ Syntax
 def function_name(parameters):
     # Function body
     return value
+
+
+Lambda Function in Python    
+A lambda function is a small, anonymous (unnamed) 
+function that can have 
+any number of parameters but only one expression.
+lambda arguments: expression
+
+lambda → Keyword used to create an anonymous function.
+arguments → Input parameters.
+expression → A single expression whose value is returned automatically.
+
+LIST
+A list is a built-in data type in Python 
+used to store multiple items in a single variable.
+
+Lists are ordered.
+Lists are mutable (can be changed).
+Lists allow duplicate values.
+Lists can store different data types.
+
+
+
+A tuple is a built-in data type
+ used to store multiple items in a single variable.
+
+Ordered collection
+Immutable (cannot be changed after creation)
+Allows duplicate values
+Can store different data types
+
+
+A set is a built-in data type in Python used to store unique elements.
+
+Characteristics of Sets
+Unordered (no indexing)
+Mutable (can add/remove elements)
+No duplicate values
+Can store different data types
+Defined using {} or the set() function
+
+
+
+dictionary 
+
+
+key-value pairs. Keys must be unique and immutable (e.g., strings, numbers, tuples),
+ while values can be of any data type.
+
+File Handling in Python
+File handling allows you to create, read, 
+write, append, and manipulate files stored on disk.
+
+Python provides
+Mode	Description
+"r"	Read
+"w"	Write (creates/truncates)
+"a"	Append
+"x"	Create only (fails if file exists)
+"r+"	Read + Write
+"w+"	Read + Write (truncates file)
+"a+"	Read + Append
