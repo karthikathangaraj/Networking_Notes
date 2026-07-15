@@ -1,0 +1,16 @@
+
+Vendor	OS	device_type
+Cisco IOS	IOS Routers/Switches	cisco_ios
+Cisco IOS-XE	IOS-XE	              cisco_ios
+Cisco NX-OS	Nexus	             cisco_nxos
+Cisco ASA	Firewall	    cisco_asa
+Cisco XR	IOS-XR	          cisco_xr
+Juniper	Junos	juniper
+Arista	EOS	arista_eos
+Huawei	VRP	huawei
+HP Comware	Comware	hp_comware
+MikroTik	RouterOS	mikrotik_routeros
+Linux Server	SSH	linux
+
+
+Hello his is a file to uploade 

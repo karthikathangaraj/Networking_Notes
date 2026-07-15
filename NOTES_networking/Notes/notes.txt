@@ -1,0 +1,9 @@
+import json
+
+device = {
+    "hostname": "R1",
+    "ip": "192.168.213.200",
+    "vendor": "Cisco"
+}
+
+print(json.dumps(device, indent=4))
