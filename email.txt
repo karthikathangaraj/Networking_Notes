@@ -1,0 +1,112 @@
+import paramiko
+import smtplib
+from email.message import EmailMessage
+import os
+
+# -----------------------------
+# Router Details
+# -----------------------------
+router_ip = input("Router IP : ")
+username = input("Username  : ")
+router_password = input("Password  : ")
+
+# -----------------------------
+# Email Details
+# -----------------------------
+sender = input("Sender Gmail : ")
+receiver = input("Receiver Email : ")
+gmail_password = input("Gmail App Password : ")
+
+# -----------------------------
+# Connect to Router
+# -----------------------------
+print("\nConnecting to Router...")
+
+ssh = paramiko.SSHClient()
+ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+
+try:
+    ssh.connect(
+        hostname=router_ip,
+        username=username,
+        password=router_password,
+        timeout=10
+    )
+
+    print("Connected Successfully")
+
+    stdin, stdout, stderr = ssh.exec_command("show ip route")
+
+    output = stdout.read().decode()
+
+    ssh.close()
+
+except Exception as e:
+    print("Router Connection Failed")
+    print(e)
+    exit()
+
+# -----------------------------
+# Create Report File
+# -----------------------------
+filename = "routing_table.txt"
+
+with open(filename, "a") as f:
+    f.write(output)
+
+print("File Created :", filename)
+
+# -----------------------------
+# Create Email
+# -----------------------------
+msg = EmailMessage()
+
+msg["Subject"] = "Cisco Router Routing Table"
+msg["From"] = sender
+msg["To"] = receiver
+
+msg.set_content("""
+Hello,
+
+Please find the attached Routing Table.
+
+Regards,
+Python Automation
+""")
+
+# -----------------------------
+# Attach File
+# -----------------------------
+with open(filename, "rb") as f:
+    data = f.read()
+
+msg.add_attachment(
+    data,
+    maintype="text",
+    subtype="plain",
+    filename=filename
+)
+
+# -----------------------------
+# Send Mail
+# -----------------------------
+print("Sending Email...")
+
+try:
+
+    smtp = smtplib.SMTP("smtp.gmail.com",587)
+
+    smtp.starttls()
+
+    smtp.login(sender,gmail_password)
+
+    smtp.send_message(msg)
+
+    smtp.quit()
+
+    print("Email Sent Successfully")
+
+except Exception as e:
+
+    print("Email Sending Failed")
+    print(e)
